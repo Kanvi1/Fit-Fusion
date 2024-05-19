@@ -9,7 +9,7 @@ technology and real-time health data to personalize workouts. By monitoring Hear
 (HR) and Respiration Rate (RR), the app tailors exercise intensity, rest periods, and routines
 in real-time. It offers immediate performance and recovery feedback, promoting efficient and
 safe fitness experiences. This user-friendly app prioritizes data privacy and aims to redefine
-personal fitness.
+personal fitness. 
 
 ## Key Features
 
