@@ -20,9 +20,11 @@ public class WorkoutInfo {
     public String getName() {
         return name;
     }
+
     public String getBgImg() {
         return bgImg;
     }
+
     public String getUnit() {
         return unit;
     }

@@ -43,21 +43,21 @@ public class Suggestion {
         return coolDown;
     }
 
-    private void checkAndAddWorkout(ArrayList<WorkoutInfo> workouts, WorkoutInfo workoutInfo, Constants.LAST_WORKOUT_INTENSITY lastWorkoutIntensity) {
+    private void checkAndAddWorkout(ArrayList<WorkoutInfo> workouts, WorkoutInfo workoutInfo,
+            Constants.LAST_WORKOUT_INTENSITY lastWorkoutIntensity) {
         if (workoutInfo != null) {
             workouts.add(workoutInfo);
             updateLastWorkoutIntensity(lastWorkoutIntensity);
         }
     }
 
-
-
     public ArrayList<WorkoutInfo> getSuggestions() {
         // set non-primitive Metrics of BodyInfo
         bodyInfo.setNonPrimitiveMetrics();
 
         ArrayList<WorkoutInfo> workouts = new ArrayList<>();
-        if (bodyInfo.getEnergyLevel() == Constants.ENERGY_LEVEL.LOW || bodyInfo.getCurrHeartRate() >= 2 * bodyInfo.getAvgHeartRate()) {
+        if (bodyInfo.getEnergyLevel() == Constants.ENERGY_LEVEL.LOW
+                || bodyInfo.getCurrHeartRate() >= 2 * bodyInfo.getAvgHeartRate()) {
             updateLastWorkoutIntensity(Constants.LAST_WORKOUT_INTENSITY.HIGH);
         }
 
@@ -72,8 +72,8 @@ public class Suggestion {
 
         // add Push ups if user is under weight or healthy, else add running workout
         if (bodyInfo.getBMI() == Constants.BMI.UNDER_WEIGHT || bodyInfo.getBMI() == Constants.BMI.HEALTHY_WEIGHT) {
-             workout = new PushUps(bodyInfo, getLastWorkoutIntensity());
-             checkAndAddWorkout(workouts, workout.getWorkoutInfo(), Constants.LAST_WORKOUT_INTENSITY.HIGH);
+            workout = new PushUps(bodyInfo, getLastWorkoutIntensity());
+            checkAndAddWorkout(workouts, workout.getWorkoutInfo(), Constants.LAST_WORKOUT_INTENSITY.HIGH);
         } else {
             workout = new Running(bodyInfo, getLastWorkoutIntensity());
             checkAndAddWorkout(workouts, workout.getWorkoutInfo(), Constants.LAST_WORKOUT_INTENSITY.HIGH);
@@ -84,7 +84,8 @@ public class Suggestion {
         checkAndAddWorkout(workouts, workout.getWorkoutInfo(), Constants.LAST_WORKOUT_INTENSITY.LOW);
 
         // add plank if user is not old or low in energy level
-        if (bodyInfo.getAgeGroup() != Constants.AGE_GROUP.OLD && bodyInfo.getEnergyLevel() != Constants.ENERGY_LEVEL.LOW) {
+        if (bodyInfo.getAgeGroup() != Constants.AGE_GROUP.OLD
+                && bodyInfo.getEnergyLevel() != Constants.ENERGY_LEVEL.LOW) {
             workout = new Plank(bodyInfo, getLastWorkoutIntensity());
             checkAndAddWorkout(workouts, workout.getWorkoutInfo(), Constants.LAST_WORKOUT_INTENSITY.HIGH);
         } else {

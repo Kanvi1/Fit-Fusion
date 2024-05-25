@@ -4,12 +4,12 @@
 
 1. [Overview](#overview)
 2. [Classes](#classes)
-   - [BodyInfo](#1-bodyinfo)
-   - [Constants](#2-constants)
-   - [Workout](#3-workout)
-   - [WorkoutInfo](#4-workoutinfo)
-   - [CoolDown, Resting, Running, Skipping, Walking](#5-cooldown-resting-running-skipping-walking)
-   - [Suggestion](#6-suggestion)
+    - [BodyInfo](#1-bodyinfo)
+    - [Constants](#2-constants)
+    - [Workout](#3-workout)
+    - [WorkoutInfo](#4-workoutinfo)
+    - [CoolDown, Resting, Running, Skipping, Walking](#5-cooldown-resting-running-skipping-walking)
+    - [Suggestion](#6-suggestion)
 3. [Usage Examples](#usage-examples)
 4. [Integration Guide](#integration-guide)
 5. [Customization](#customization)
@@ -27,7 +27,7 @@ The `BodyInfo` class encapsulates user-specific physical metrics, including age,
 
 #### Constructor
 
-``` java
+```java
 public BodyInfo(int age, Constants.GENDER gender, int height, int weight, int currHeartRate, int avgHeartRate, int currRespRate, int avgRespRate, int currSteps, int targetSteps, int currCalories, int targetCalories)
 ```
 
@@ -35,8 +35,8 @@ Creates a new `BodyInfo` instance with the provided user information.
 
 #### Public Methods
 
-- `setNonPrimitiveMetrics()`: Calculates and sets BMI, age group, and energy level based on the provided metrics.
-- Getter and setter methods for various physical metrics.
+-   `setNonPrimitiveMetrics()`: Calculates and sets BMI, age group, and energy level based on the provided metrics.
+-   Getter and setter methods for various physical metrics.
 
 ### 2. Constants
 
@@ -52,7 +52,7 @@ The `WorkoutInfo` class represents information about a specific workout, includi
 
 #### Constructor
 
-``` java
+```java
 public WorkoutInfo(String name, String value, String unit, String bgImg)
 ```
 
@@ -68,7 +68,7 @@ The `Suggestion` class coordinates the generation of workout suggestions based o
 
 #### Constructor
 
-``` java
+```java
 public Suggestion(BodyInfo bodyInfo)
 ```
 
@@ -76,13 +76,13 @@ Creates a new `Suggestion` instance with the provided `BodyInfo`. The initial la
 
 #### Public Methods
 
-- `updateLastWorkoutIntensity`: Updates the last workout intensity based on the provided value.
-- `getLastWorkoutIntensity`: Returns the last workout intensity.
-- `getSuggestions`: Generates workout suggestions based on the user's body information and previous workout intensity. Returns a list of `WorkoutInfo` objects.
+-   `updateLastWorkoutIntensity`: Updates the last workout intensity based on the provided value.
+-   `getLastWorkoutIntensity`: Returns the last workout intensity.
+-   `getSuggestions`: Generates workout suggestions based on the user's body information and previous workout intensity. Returns a list of `WorkoutInfo` objects.
 
 ## 3. Usage Examples
 
-``` java
+```java
 // Example BodyInfo creation
 BodyInfo bodyInfo = new BodyInfo(/* ... */);
 
@@ -126,4 +126,4 @@ The FitFusion Workout Suggestions module can be easily integrated into fitness a
 
 The FitFusion Workout Suggestions module is designed for flexibility and customization. You can customize the workout duration calculations, thresholds, and workout types based on your application's specific requirements.
 
-- **Extend Workout Types**: Create additional workout types by extending the
+-   **Extend Workout Types**: Create additional workout types by extending the

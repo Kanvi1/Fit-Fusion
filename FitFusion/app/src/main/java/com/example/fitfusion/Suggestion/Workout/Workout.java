@@ -21,14 +21,19 @@ abstract public class Workout {
     public Constants.LAST_WORKOUT_INTENSITY getLastWorkoutIntensity() {
         return lastWorkoutIntensity;
     }
+
     public WorkoutInfo getWorkoutInfo() {
         if (Objects.equals(getTime(), "0")) {
             return null;
         }
         return new WorkoutInfo(getName(), getTime(), getUnit(), getBgImg());
     }
+
     abstract public String getName();
+
     abstract public String getTime();
+
     abstract public String getUnit();
+
     abstract public String getBgImg();
 }

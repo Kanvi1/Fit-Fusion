@@ -16,7 +16,7 @@ public class CoolDown extends Workout {
 
     @Override
     public String getTime() {
-        int coolDownTime = 3;  // Default cool down time (adjusted to the maximum)
+        int coolDownTime = 3; // Default cool down time (adjusted to the maximum)
 
         // Adjust cool down time based on conditions
         switch (getBodyInfo().getAgeGroup()) {
@@ -27,10 +27,10 @@ public class CoolDown extends Workout {
                 // No adjustments for young age
                 break;
             case MID_AGED:
-                coolDownTime += 3;  // Adjusted to increase by 5 minutes for mid-aged
+                coolDownTime += 3; // Adjusted to increase by 5 minutes for mid-aged
                 break;
             case OLD:
-                coolDownTime += 5;  // Adjusted to increase by 10 minutes for old people
+                coolDownTime += 5; // Adjusted to increase by 10 minutes for old people
                 break;
         }
 
@@ -42,16 +42,16 @@ public class CoolDown extends Workout {
                 // No adjustments for healthy weight
                 break;
             case OVER_WEIGHT:
-                coolDownTime += 3;  // Adjusted to increase by 5 minutes for overweight
+                coolDownTime += 3; // Adjusted to increase by 5 minutes for overweight
                 break;
             case OBESE:
-                coolDownTime += 4;  // Adjusted to increase by 10 minutes for obese
+                coolDownTime += 4; // Adjusted to increase by 10 minutes for obese
                 break;
         }
 
         switch (getBodyInfo().getEnergyLevel()) {
             case LOW:
-                coolDownTime += 3;  // Adjusted to increase by 8 minutes for low energy level
+                coolDownTime += 3; // Adjusted to increase by 8 minutes for low energy level
                 break;
             case MEDIUM:
                 // No adjustments for medium energy level
@@ -63,7 +63,7 @@ public class CoolDown extends Workout {
 
         // Cool down time increases as lastWorkoutIntensity becomes high
         if (getLastWorkoutIntensity() == Constants.LAST_WORKOUT_INTENSITY.HIGH) {
-            coolDownTime += 3;  // Adjusted to increase by 5 minutes for high intensity
+            coolDownTime += 3; // Adjusted to increase by 5 minutes for high intensity
         }
 
         // Cool down is 0 if lastWorkoutIntensity was low

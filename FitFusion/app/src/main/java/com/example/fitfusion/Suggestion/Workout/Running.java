@@ -16,48 +16,48 @@ public class Running extends Workout {
     }
 
     public String getTime() {
-        int runningTime = 20;  // Default running time (adjusted to the maximum)
+        int runningTime = 20; // Default running time (adjusted to the maximum)
 
         // Adjust running time based on conditions
         switch (getBodyInfo().getBMI()) {
             case UNDER_WEIGHT:
-                runningTime -= 3;  // Adjusted to reduce by 3 minutes
+                runningTime -= 3; // Adjusted to reduce by 3 minutes
                 break;
             case HEALTHY_WEIGHT:
                 // No adjustments for healthy weight
                 break;
             case OVER_WEIGHT:
-                runningTime -= 6;  // Adjusted to reduce by 6 minutes
+                runningTime -= 6; // Adjusted to reduce by 6 minutes
                 break;
             case OBESE:
-                runningTime -= 9;  // Adjusted to reduce by 9 minutes
+                runningTime -= 9; // Adjusted to reduce by 9 minutes
                 break;
         }
 
         switch (getBodyInfo().getAgeGroup()) {
             case TEEN:
-                runningTime -= 3;  // Adjusted to reduce by 3 minutes
+                runningTime -= 3; // Adjusted to reduce by 3 minutes
                 break;
             case YOUNG:
                 // No adjustments for young age
                 break;
             case MID_AGED:
-                runningTime -= 6;  // Adjusted to reduce by 6 minutes
+                runningTime -= 6; // Adjusted to reduce by 6 minutes
                 break;
             case OLD:
-                runningTime = 0;  // No running for old people
+                runningTime = 0; // No running for old people
                 break;
         }
 
         switch (getBodyInfo().getEnergyLevel()) {
             case LOW:
-                runningTime = 0;  // No running for low energy level
+                runningTime = 0; // No running for low energy level
                 break;
             case MEDIUM:
                 // No adjustments for medium energy level
                 break;
             case HIGH:
-                runningTime -= 3;  // Adjusted to reduce by 3 minutes for high energy level
+                runningTime -= 3; // Adjusted to reduce by 3 minutes for high energy level
                 break;
         }
 
@@ -66,7 +66,7 @@ public class Running extends Workout {
                 // No specific adjustments for males
                 break;
             case FEMALE:
-                runningTime -= 3;  // Adjusted to reduce by 3 minutes for females
+                runningTime -= 3; // Adjusted to reduce by 3 minutes for females
                 break;
         }
 

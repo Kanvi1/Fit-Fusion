@@ -15,7 +15,7 @@ public class Walking extends Workout {
     }
 
     public String getTime() {
-        int walkingTime = 30;  // Default walking time (adjusted to the maximum)
+        int walkingTime = 30; // Default walking time (adjusted to the maximum)
 
         // Adjust walking time based on conditions
         switch (getBodyInfo().getAgeGroup()) {
@@ -26,10 +26,10 @@ public class Walking extends Workout {
                 // No adjustments for young age
                 break;
             case MID_AGED:
-                walkingTime -= 8;  // Adjusted to reduce by 8 minutes for mid-aged
+                walkingTime -= 8; // Adjusted to reduce by 8 minutes for mid-aged
                 break;
             case OLD:
-                walkingTime -= 15;  // Adjusted to reduce by 15 minutes for old people
+                walkingTime -= 15; // Adjusted to reduce by 15 minutes for old people
                 break;
         }
 
@@ -41,16 +41,16 @@ public class Walking extends Workout {
                 // No adjustments for healthy weight
                 break;
             case OVER_WEIGHT:
-                walkingTime -= 10;  // Adjusted to reduce by 10 minutes for overweight
+                walkingTime -= 10; // Adjusted to reduce by 10 minutes for overweight
                 break;
             case OBESE:
-                walkingTime -= 15;  // Adjusted to reduce by 15 minutes for obese
+                walkingTime -= 15; // Adjusted to reduce by 15 minutes for obese
                 break;
         }
 
         switch (getBodyInfo().getEnergyLevel()) {
             case LOW:
-                walkingTime -= 12;  // Adjusted to reduce by 12 minutes for low energy level
+                walkingTime -= 12; // Adjusted to reduce by 12 minutes for low energy level
                 break;
             case MEDIUM:
                 // No adjustments for medium energy level

@@ -7,7 +7,7 @@ public class Constants {
     public static final float OVER_WEIGHT_THRESHOLD = 29.9F;
 
     // Constants for age groups
-    public static final int  TEEN_THRESHOLD = 18;
+    public static final int TEEN_THRESHOLD = 18;
     public static final int YOUNG_THRESHOLD = 35;
     public static final int MID_AGED_THRESHOLD = 50;
 

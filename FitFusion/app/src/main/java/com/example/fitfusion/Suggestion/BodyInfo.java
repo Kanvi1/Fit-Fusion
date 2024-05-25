@@ -1,6 +1,6 @@
 package com.example.fitfusion.Suggestion;
 
-public class BodyInfo{
+public class BodyInfo {
     int age;
     Constants.GENDER gender;
     // height in cm
@@ -24,7 +24,8 @@ public class BodyInfo{
 
     Constants.ENERGY_LEVEL energyLevel;
 
-    public BodyInfo(int age, Constants.GENDER gender, int height, int weight, int currHeartRate, int avgHeartRate, int currRespRate, int avgRespRate, int currSteps, int targetSteps, int currCalories, int targetCalories) {
+    public BodyInfo(int age, Constants.GENDER gender, int height, int weight, int currHeartRate, int avgHeartRate,
+            int currRespRate, int avgRespRate, int currSteps, int targetSteps, int currCalories, int targetCalories) {
         this.age = age;
         this.gender = gender;
         this.height = height;
