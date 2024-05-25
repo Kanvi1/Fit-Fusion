@@ -68,7 +68,7 @@ public class Resting extends Workout {
 
         // Cool down time increases as lastWorkoutIntensity becomes high
         if (lastWorkoutIntensity == Constants.LAST_WORKOUT_INTENSITY.HIGH) {
-            restTime += 5;  // Adjusted to increase by 5 minutes for high intensity
+            restTime += 5; // Adjusted to increase by 5 minutes for high intensity
         }
 
         // Ensure the rest time is within the range of 5 to 20 minutes

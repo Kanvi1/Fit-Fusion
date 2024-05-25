@@ -16,7 +16,7 @@ public class PushUps extends Workout {
 
     @Override
     public String getTime() {
-        int pushUpsCount = 50;  // Ideal push-ups count
+        int pushUpsCount = 50; // Ideal push-ups count
 
         // Adjust push-ups count based on conditions
         switch (getBodyInfo().getAgeGroup()) {
@@ -36,13 +36,13 @@ public class PushUps extends Workout {
 
         // Women do fewer push-ups than men
         if (getBodyInfo().getGender() == Constants.GENDER.FEMALE) {
-            pushUpsCount /= 2;  // Adjusted to half for women
+            pushUpsCount /= 2; // Adjusted to half for women
         }
 
         // Adjust push-ups count based on energy level
         switch (getBodyInfo().getEnergyLevel()) {
             case LOW:
-                pushUpsCount /= 2;  // Adjusted to half for low energy level
+                pushUpsCount /= 2; // Adjusted to half for low energy level
                 break;
             case MEDIUM:
                 pushUpsCount /= 1.5;
@@ -54,7 +54,7 @@ public class PushUps extends Workout {
 
         // Obese people do fewer push-ups
         if (getBodyInfo().getBMI() == Constants.BMI.OBESE) {
-            pushUpsCount /= 2.5;  // Adjusted to half for obese people
+            pushUpsCount /= 2.5; // Adjusted to half for obese people
         }
 
         // Ensure the push-ups count is within a reasonable range
@@ -62,7 +62,6 @@ public class PushUps extends Workout {
 
         return String.valueOf(pushUpsCount);
     }
-
 
     @Override
     public String getUnit() {

@@ -16,7 +16,7 @@ public class Skipping extends Workout {
     }
 
     public String getTime() {
-        int skippingTime = 15;  // Default skipping time (adjusted to the maximum)
+        int skippingTime = 15; // Default skipping time (adjusted to the maximum)
 
         // Adjust skipping time based on conditions
         switch (getBodyInfo().getAgeGroup()) {
@@ -27,10 +27,10 @@ public class Skipping extends Workout {
                 // No adjustments for young age
                 break;
             case MID_AGED:
-                skippingTime -= 5;  // Adjusted to reduce by 5 minutes for mid-aged
+                skippingTime -= 5; // Adjusted to reduce by 5 minutes for mid-aged
                 break;
             case OLD:
-                skippingTime = 0;  // Adjusted to reduce to 0 minutes for old people
+                skippingTime = 0; // Adjusted to reduce to 0 minutes for old people
                 break;
         }
 
@@ -42,16 +42,16 @@ public class Skipping extends Workout {
                 // No adjustments for healthy weight
                 break;
             case OVER_WEIGHT:
-                skippingTime -= 5;  // Adjusted to reduce by 5 minutes for overweight
+                skippingTime -= 5; // Adjusted to reduce by 5 minutes for overweight
                 break;
             case OBESE:
-                skippingTime -= 10;  // Skipping time is 0 for obese
+                skippingTime -= 10; // Skipping time is 0 for obese
                 break;
         }
 
         switch (getBodyInfo().getEnergyLevel()) {
             case LOW:
-                skippingTime -= 8;  // Adjusted to reduce by 8 minutes for low energy level
+                skippingTime -= 8; // Adjusted to reduce by 8 minutes for low energy level
                 break;
             case MEDIUM:
                 // No adjustments for medium energy level
@@ -68,7 +68,7 @@ public class Skipping extends Workout {
 
         // Women do less skipping than men
         if (getBodyInfo().getGender() == Constants.GENDER.FEMALE) {
-            skippingTime -= 3;  // Adjusted to reduce by 3 minutes for women
+            skippingTime -= 3; // Adjusted to reduce by 3 minutes for women
         }
 
         // Ensure the skipping time is within the range of 0 to 15 minutes
